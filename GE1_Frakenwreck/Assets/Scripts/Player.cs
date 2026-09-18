@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+   
+    [SerializeField] private float speed = 0.1f;
 
-    [SerializeField] float speed = 0.1f;
+    //Serialized class field
+    [SerializeField] private Transform transformComponent;
+
 
     // Update is called once per frame
     void Update()
@@ -17,7 +21,17 @@ public class Player : MonoBehaviour
 
         if(wIsPressed)
         {
-            transform.position += new Vector3(0,speed,0);
+            //Inherited
+            //transform.position += new Vector3(0,speed,0);
+
+            //Find the transform
+            //Transform transform = GetComponent<Transform>();
+            //transform.position += new Vector3(0, speed, 0);
+
+            //GetComponent<Transform>().position += new Vector3(0, speed, 0);
+
+            //Serialized Exampled
+            transformComponent.position += new Vector3(0, speed, 0);
         }
     }
 }
