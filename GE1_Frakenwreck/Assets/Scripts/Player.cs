@@ -28,19 +28,18 @@ public class Player : MonoBehaviour
     {
         //UP
         if(Input.GetKey(KeyCode.W))        
-            transform.position += new Vector3(0, speed, 0);
+            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
 
         //DOWN
         if (Input.GetKey(KeyCode.S))
-            transform.position -= new Vector3(0, speed, 0);
-
+            transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
         //LEFT
         if (Input.GetKey(KeyCode.A))
-            transform.position -= new Vector3(speed, 0, 0);
+            transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
 
         //RIGHT
         if (Input.GetKey(KeyCode.D))
-            transform.position += new Vector3(speed, 0, 0);
+            transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
 
     }
 }
