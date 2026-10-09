@@ -18,10 +18,15 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Create a clone of bullet
-            //Instantiate(bullet, transform.position + new Vector3(0, 0.5f), Quaternion.identity);
-            Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+            ShootBulletProjectile();
         }
+    }
+
+    public void ShootBulletProjectile()
+    {
+        //Create a clone of bullet
+        //Instantiate(bullet, transform.position + new Vector3(0, 0.5f), Quaternion.identity);
+        Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
     }
 
     private void Movement()
