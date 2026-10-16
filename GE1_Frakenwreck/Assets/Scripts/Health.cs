@@ -3,12 +3,17 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 5;
+    [SerializeField] private int pointsOnDeath = 1;
+   
 
     private int currentHealth;
 
     private void Start()
     {
-        FullHeal();
+        FullHeal();        
+        //scoreTracker = GameObject.Find("Score Container").GetComponent<ScoreTracker>();
+        //scoreTracker = FindObjectOfType<ScoreTracker>();
+        //scoreTracker = GameObject.FindGameObjectWithTag("ScoreTracker").GetComponent<ScoreTracker>();
     }
 
     public void FullHeal()
@@ -29,5 +34,15 @@ public class Health : MonoBehaviour
     private void Dispose()
     {
         Destroy(this.gameObject);
+        AddPoints();
+    }
+
+    //Adds points to the UI
+    private void AddPoints()
+    {
+        //SOLID
+        //S = Single Responsibility Principle
+        //scoreTracker.AddPoints(pointsOnDeath);
+        ScoreTracker.Singleton.AddPoints(pointsOnDeath);
     }
 }

@@ -8,7 +8,7 @@ public class Damager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log($"Triggered with {other.gameObject.name}");
+        //Debug.Log($"Triggered with {other.gameObject.name}");
 
         /*if (other.gameObject.CompareTag("Enemy"))
         {
