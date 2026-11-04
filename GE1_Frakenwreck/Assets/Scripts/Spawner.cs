@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject objectToSpawn;
+    [SerializeField] private GameObject[] objectsToSpawn;
+    [SerializeField] private float spawnWidth = 8;
     [SerializeField] private float spawnMinInterval = 2;
     [SerializeField] private float spawnMaxInterval = 5;
 
@@ -33,7 +34,14 @@ public class Spawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        Instantiate(objectToSpawn, transform.position, Quaternion.identity);
+        //Pick a random object in the list
+        int randomIndex = Random.Range(0, objectsToSpawn.Length);
+
+        //Pick a random X position across the top of the screen
+        float randomX = Random.Range(-spawnWidth / 2, spawnWidth / 2);
+        Vector3 spawnPosition = transform.position + new Vector3(randomX, 0, 0);
+
+        Instantiate(objectsToSpawn[randomIndex], spawnPosition, Quaternion.identity);
     }
     
 
