@@ -8,7 +8,7 @@ public class EnemyTint : MonoBehaviour
 
     private void Start()
     {
-        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color = tint;
     }
 }

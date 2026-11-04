@@ -10,7 +10,7 @@ public class EnemyLookAtPlayer : MonoBehaviour
     private void Start()
     {
         //Find the player with its tag
-        GameObject playerObject = GameObject.FindWithTag("Player");
+        gameObject playerObject = GameObject.FindWithTag("Player");
 
         if (playerObject != null)
         {
@@ -21,17 +21,11 @@ public class EnemyLookAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //No player to look at
-        if (player == null)
-        {
-            return;
-        }
-
         //Direction from the enemy to the player
         Vector3 direction = player.position - visual.position;
 
         //Angle of that direction, in degrees
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg
 
         //The enemy sprite points down, so we add 90 degrees
         visual.rotation = Quaternion.Euler(0, 0, angle + 90);
