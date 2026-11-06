@@ -57,10 +57,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7653231730255988607, guid: 4ed18eb428a5f154682ad030cfba6d64, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653231730255988607, guid: 4ed18eb428a5f154682ad030cfba6d64, type: 3}
       propertyPath: fireInterval
       value: 1.5
       objectReference: {fileID: 0}

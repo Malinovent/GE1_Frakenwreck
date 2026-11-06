@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3586845788225710321}
   - component: {fileID: 5315628481550763803}
+  - component: {fileID: 8168370480954508976}
   m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
@@ -92,6 +93,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &8168370480954508976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633266989773266167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d870839b1649a29ef28ddf7ede9e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyTint
+  tint: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &3864155582533880208
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +152,6 @@ GameObject:
   - component: {fileID: 5774851718647570474}
   - component: {fileID: 7653231730255988607}
   - component: {fileID: 4239900958825581493}
-  - component: {fileID: 161230879898116710}
   m_Layer: 7
   m_Name: Enemy_2
   m_TagString: Enemy
@@ -269,19 +282,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLookAtPlayer
   visual: {fileID: 3586845788225710321}
---- !u!114 &161230879898116710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3981480355179920798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d870839b1649a29ef28ddf7ede9e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyTint
-  tint: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &4706034965910782502
 GameObject:
   m_ObjectHideFlags: 0

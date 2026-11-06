@@ -12,7 +12,7 @@ public class EnemyShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timePassed += Time.DeltaTime;
+        timePassed += Time.deltaTime;
 
         if (timePassed >= fireInterval)
         {
@@ -24,6 +24,6 @@ public class EnemyShooter : MonoBehaviour
     private void Shoot()
     {
         //Create a clone of the bullet at the fire point
-        Instanciate(bullet, firePoint.position, Quaternion.identity);
+        Instantiate(bullet, firePoint.position, Quaternion.identity);
     }
 }

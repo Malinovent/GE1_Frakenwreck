@@ -35,10 +35,10 @@ public class Spawner : MonoBehaviour
     private void SpawnObject()
     {
         //Pick a random object in the list
-        int randomIndex = Random.Range(0, objectsToSpawn.Length + 1);
+        int randomIndex = Random.Range(0, objectsToSpawn.Length);
 
         //Pick a random X position across the top of the screen
-        int randomX = Random.Range(-spawnWidth / 2, spawnWidth / 2);
+        float randomX = Random.Range(-spawnWidth / 2, spawnWidth / 2);
         Vector3 spawnPosition = transform.position + new Vector3(randomX, 0, 0);
 
         Instantiate(objectsToSpawn[randomIndex], spawnPosition, Quaternion.identity);
@@ -53,7 +53,7 @@ public class Spawner : MonoBehaviour
 
     public void StopSpawning()
     {
-
+        
     }
 
 }
