@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 5;
     [SerializeField] private int pointsOnDeath = 1;
-   
+
+    [SerializeField] private UnityEvent onDamageTaken;
+    [SerializeField] private UnityEvent onDeath;
 
     private int currentHealth;
 
@@ -24,10 +27,12 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        onDamageTaken.Invoke();
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Dispose();
+            onDeath.Invoke();
         }
     }
 
