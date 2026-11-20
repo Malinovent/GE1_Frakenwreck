@@ -1627,6 +1627,7 @@ GameObject:
   - component: {fileID: 1922598927}
   - component: {fileID: 1922598930}
   - component: {fileID: 1922598931}
+  - component: {fileID: 1922598932}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1743,19 +1744,7 @@ MonoBehaviour:
   pointsOnDeath: 1
   onDamageTaken:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -1771,6 +1760,8 @@ MonoBehaviour:
           m_StringArgument: Die
           m_BoolArgument: 0
         m_CallState: 2
+  damageSoundClip: {fileID: 8300000, guid: d5cef3a279bc3fd43b607b4f189c4c74, type: 3}
+  damageSound: {fileID: 4525113785961809282, guid: 6fc2c6bde45e64a4ea5d642a2de5fe73, type: 3}
 --- !u!95 &1922598930
 Animator:
   serializedVersion: 7
@@ -1839,6 +1830,14 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!81 &1922598932
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922598925}
+  m_Enabled: 1
 --- !u!1 &1989561140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,7 +1848,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1989561143}
   - component: {fileID: 1989561142}
-  - component: {fileID: 1989561141}
   - component: {fileID: 1989561144}
   m_Layer: 0
   m_Name: Main Camera
@@ -1858,14 +1856,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1989561141
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989561140}
-  m_Enabled: 1
 --- !u!20 &1989561142
 Camera:
   m_ObjectHideFlags: 0

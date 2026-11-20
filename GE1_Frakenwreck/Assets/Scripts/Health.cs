@@ -9,6 +9,9 @@ public class Health : MonoBehaviour
     [SerializeField] private UnityEvent onDamageTaken;
     [SerializeField] private UnityEvent onDeath;
 
+    [SerializeField] private AudioClip damageSoundClip;
+    [SerializeField] private GameObject damageSound;
+
     private int currentHealth;
 
     private void Start()
@@ -28,6 +31,17 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damageAmount;
         onDamageTaken.Invoke();
+
+        if (damageSound != null)
+        {
+            GameObject soundObject = Instantiate(damageSound, this.transform.position, Quaternion.identity);
+
+            AudioSource audioSource = soundObject.GetComponent<AudioSource>();
+
+            audioSource.clip = damageSoundClip;
+            audioSource.pitch = Random.Range(0.8f, 1.2f);
+            audioSource.Play();
+        }
 
         if (currentHealth <= 0)
         {
